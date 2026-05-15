@@ -20,7 +20,7 @@ This is a full-stack notes workspace built for the assignment requirements. It i
 - React 19
 - Vite
 - Express 5
-- JSON file persistence for simple local setup
+- SQLite database persistence using Node's built-in SQLite module
 - Optional OpenAI Responses API integration
 
 ## Run Locally
@@ -48,9 +48,15 @@ OPENAI_API_KEY=your_key
 OPENAI_MODEL=gpt-4.1-mini
 ```
 
+You can copy `.env.example` to `.env` for local configuration.
+
 ## Production Build
 
 ```bash
 npm run build
 npm start
 ```
+
+## Database
+
+The backend creates a SQLite database automatically at `server/data/note_nest.sqlite`. The database stores users, password hashes, notes, share links, archive state, and AI usage events.
